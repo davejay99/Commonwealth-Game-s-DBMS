@@ -1,0 +1,286 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sqlda.h>
+#include <pgtypes_date.h>    
+#include <pgtypes_numeric.h>
+    
+sqlda_t *sqlda1;
+sqlda_t *sqlda2;
+
+EXEC SQL BEGIN DECLARE SECTION;
+
+int c,k;
+const char *password, *username, *name, *search;
+char query[1000];
+char cbuff[1024];
+numeric yr;
+char *cntry;
+int gold,silver;
+int i=0,intval;
+long long int longlongval;
+float realval;
+date dateval;
+numeric numericval;
+short shortval;
+
+EXEC SQL END DECLARE SECTION;
+EXEC SQL WHENEVER SQLERROR CALL print_error();
+
+void print_error(){
+	fprintf(stderr, "==== sqlca ====\n");
+    fprintf(stderr, "sqlcode: %ld\n", sqlca.sqlcode);
+    fprintf(stderr, "sqlerrm.sqlerrml: %d\n", sqlca.sqlerrm.sqlerrml);
+    fprintf(stderr, "sqlerrm.sqlerrmc: %s\n", sqlca.sqlerrm.sqlerrmc);
+    fprintf(stderr, "sqlerrd: %ld %ld %ld %ld %ld %ld\n", sqlca.sqlerrd[0],sqlca.sqlerrd[1],sqlca.sqlerrd[2],
+                                                          sqlca.sqlerrd[3],sqlca.sqlerrd[4],sqlca.sqlerrd[5]);
+    fprintf(stderr, "sqlwarn: %d %d %d %d %d %d %d %d\n", sqlca.sqlwarn[0], sqlca.sqlwarn[1], sqlca.sqlwarn[2],
+                                                          sqlca.sqlwarn[3], sqlca.sqlwarn[4], sqlca.sqlwarn[5],
+                                                          sqlca.sqlwarn[6], sqlca.sqlwarn[7]);
+    fprintf(stderr, "sqlstate: %5s\n", sqlca.sqlstate);
+    fprintf(stderr, "===============\n");
+}
+
+void execquery(char buff[]){
+
+	strcpy(query,buff);
+	printf("%s\n",query);
+
+    int firstTime = 1;
+    EXEC SQL PREPARE query_prep FROM :query;
+    EXEC SQL DECLARE cur0 CURSOR FOR query_prep;
+    EXEC SQL OPEN cur0;
+
+    while(sqlca.sqlcode==0){
+
+        EXEC SQL FETCH cur0 INTO DESCRIPTOR sqlda1;
+        sqlda_t *cur_sqlda;
+
+        for (cur_sqlda = sqlda1;cur_sqlda != NULL;cur_sqlda = cur_sqlda->desc_next){
+
+            int i,cnt;
+            cnt = 0;
+            char name_buf[1024];
+            char var_buf[1024];
+            char s1[10][1024];
+
+            if(sqlca.sqlcode != 0)
+                break;
+
+            for (i = 0; i < cur_sqlda->sqld; i++){
+                sqlvar_t v = cur_sqlda->sqlvar[i];
+                char *sqldata = v.sqldata;
+                short sqllen  = v.sqllen;
+                strncpy(name_buf, v.sqlname.data, v.sqlname.length);
+                name_buf[v.sqlname.length] = '\0';
+
+                switch (v.sqltype){
+
+                    case ECPGt_char:
+                        memset(&var_buf, 0, sizeof(var_buf));
+                        memcpy(&var_buf, sqldata, (sizeof(var_buf)<=sqllen ? sizeof(var_buf)-1 : sqllen) );
+                        break;
+
+                    case ECPGt_int: /* integer */
+                        memcpy(&intval, sqldata, sqllen);
+                        snprintf(var_buf, sizeof(var_buf), "%d", intval);
+                        break;
+
+                    case ECPGt_long_long: /* bigint */
+                        memcpy(&longlongval, sqldata, sqllen);
+                        snprintf(var_buf, sizeof(var_buf), "%lld", longlongval);
+                        break;
+
+                    case ECPGt_float: /* real */
+                        memcpy(&realval, sqldata, sqllen);
+                        snprintf(var_buf, sizeof(var_buf), "%.2f", realval);
+                        break;
+
+                    case ECPGt_short: /* sort */
+                        memcpy(&shortval, sqldata, sqllen);
+                        snprintf(var_buf, sizeof(var_buf), "%d", shortval);
+                        break;
+
+                    case 7: /* bigint */
+                        memcpy(&longlongval, sqldata, sqllen);
+                        snprintf(var_buf, sizeof(var_buf), "%lld", longlongval);
+                        break;
+
+                    default:
+                        {
+                            int i;
+                            memset(var_buf, 0, sizeof(var_buf));
+                            for (i = 0; i < sqllen; i++){
+                                char tmpbuf[16];
+                                snprintf(tmpbuf, sizeof(tmpbuf), "%02x ", (unsigned char) sqldata[i]);
+                                strncat(var_buf, tmpbuf, sizeof(var_buf));
+                            }
+                        }
+                        break;
+                }
+
+                if(firstTime==1){
+                    printf("%-25s",name_buf);
+                    strcpy(s1[cnt],var_buf);
+                    cnt++;
+                }
+                else{
+                    printf("%-25s",var_buf);
+                }
+            }
+            printf("\n");
+            if(firstTime==1){
+                int j;
+                firstTime=0;
+                for(j=0 ; j<cnt ; j++)
+                    printf("%-25s",s1[j]);
+                printf("\n");
+            }
+        }
+    }
+
+    EXEC SQL CLOSE cur0;
+    EXEC SQL COMMIT;
+}
+
+void query1(){
+    char query[1024];
+    char country[20], year[20];
+    printf("Enter Year:    ");
+    scanf("%s",year);
+    printf("Enter Country: ");
+    scanf("%s",country);
+    
+    strcpy(query,"select * from medals(");
+    strcat(query,year);
+    strcat(query,",'");
+    strcat(query,country);
+    strcat(query,"');");
+
+    execquery(query);
+}
+
+void query2(){
+    char year[20],query[1024];
+    printf("Enter Year:    ");
+    scanf("%s",year);
+    
+    strcpy(query,"select * from medals_1(");
+    strcat(query,year);
+    strcat(query,") order by gold desc;");\
+
+    execquery(query);
+}
+
+void query3(){
+    char country[20],query[1024];
+    printf("Enter Country: ");
+    scanf("%s",country);
+    
+    strcpy(query,"select * from medals_2('");
+    strcat(query,country);
+    strcat(query,"');");
+
+    execquery(query);
+}
+
+void query4(){
+    char country[20], year[20], query[1024];
+    printf("Enter Year:    ");
+    scanf("%s",year);
+    printf("Enter Country: ");
+    scanf("%s",country);
+    
+    strcpy(query,"select * from medals_3(");
+    strcat(query,year);
+    strcat(query,",'");
+    strcat(query,country);
+    strcat(query,"');");
+
+    execquery(query);
+}
+
+void remoteChange(){
+    printf("\nQuery : ");
+    scanf(" %[^\n]",query);
+
+    EXEC SQL PREPARE uq FROM :query;
+    EXEC SQL EXECUTE uq;
+
+    if(sqlca.sqlcode==0)
+        fprintf(stderr, "Successful\n");    
+
+    EXEC SQL COMMIT;
+}
+
+int main()
+{
+    username = "201701186";
+    name = "201701186@10.100.71.21";
+    password = "201701186";
+    search = "CommonWealth_Games";
+
+    EXEC SQL CONNECT TO :name USER :username USING :password;
+    if(sqlca.sqlcode==0){
+        fprintf(stderr, "Connection Successful\n");
+    }
+    else
+    {
+        fprintf(stderr,"Connection couldn't be established\n");
+        exit(1);
+    }
+
+    EXEC SQL set search_path to :search;
+    if(sqlca.sqlcode==0){
+        fprintf(stderr,"Search_path Successfully set\n");
+    }
+    else
+    {
+        fprintf(stderr,"No such path available\n");
+        exit(1);
+    }
+
+    while(1)
+    {
+        printf("\n\n1. Show number of medals won by a country in a specific commmonweaalth games \n");
+        printf("2. Show medal tally of olympics in given year\n");
+        printf("3. Show number of medals won by a country in all commmonweaalth games it participated in\n");
+        printf("4. Show details of all events a country participated in given commmonweaalth games \n");
+        printf("5. Run a custom query\n");
+        printf("6. Update or Insert or Delete data in database\n");
+        printf("7. Exit\n\n");
+        printf("Enter Your choice:    ");
+        scanf("%d",&c);
+
+        switch(c){
+        	case 1:	query1();
+        			break;
+
+        	case 2:	query2();
+        			break;
+
+        	case 3: query3();
+        			break;
+
+        	case 4:	query4();
+        			break;
+
+        	case 5:	printf("enter query: ");
+        		scanf("%d",&k);
+        		gets(cbuff);
+        		printf("%d %s\n",k,cbuff);
+        		execquery(cbuff);
+        		break;
+
+            	case 6: remoteChange();
+                    	break;
+
+        	default:
+        			return 0;
+        }
+    }
+}
+
+
+

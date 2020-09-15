@@ -1,0 +1,1238 @@
+-- Summit ----------------------------------------------------------------------
+insert into Summit values('2012','Summer','England','London');
+insert into Summit values('2016','Summer','Brazil','Rio');
+
+
+
+-- events in Summit ------------------------------------------------------------
+insert into event values(199601,'Basketball',5,2,2);
+insert into event values(199602,'Badminton Men Single',1,2,3);
+insert into event values(199603,'Badminton Women Single',1,2,3);
+insert into event values(199604,'Badminton Mix Double',2,2,2);
+insert into event values(199605,'Swimming Men',1,4,2);
+insert into event values(199606,'Swimming Women',1,4,2);
+insert into event values(199607,'Wrestling Men 74 kg',1,2,2);
+insert into event values(199608,'Wrestling Men 86 kg',1,2,2);
+insert into event values(199609,'Wrestling Women 58 kg',1,2,2);
+insert into event values(199610,'Wrestling Women 63 kg',1,2,2);
+
+
+
+-- events held_in Summits -------------------------------------------------------
+insert into held_in values(2012,199601);
+insert into held_in values(2012,199602);
+insert into held_in values(2012,199603);
+insert into held_in values(2012,199605);
+insert into held_in values(2012,199607);
+insert into held_in values(2012,199609);
+
+insert into held_in values(2016,199601);
+insert into held_in values(2016,199602);
+insert into held_in values(2016,199603);
+insert into held_in values(2016,199604);
+insert into held_in values(2016,199605);
+insert into held_in values(2016,199606);
+insert into held_in values(2016,199607);
+insert into held_in values(2016,199608);
+insert into held_in values(2016,199609);
+insert into held_in values(2016,199610);
+
+
+
+-- Referee in Summits ------------------------------------------------------------------
+insert into Referee values(19710701,'Howard Webb','M','07/14/1971','England','9033403367');
+insert into Referee values(19850202,'Micheal Oliver','M','02/20/1985','Germany','9428252034');
+insert into Referee values(19880903,'Sophie Turner','F','09/30/1988','USA','9427724799');
+insert into Referee values(19820504,'Marcus Alonso','M','05/12/1982','France','942825203');
+insert into Referee values(19850105,'Shirley Patel','F','01/17/1985','India','942822034');
+insert into Referee values(19821206,'Rahul Tendulkar','M','12/12/1982','India','428252034');
+insert into Referee values(19791107,'Xhin Son','M','11/21/1979','Japan','942825204');
+
+
+
+-- coaches in Summits -----------------------------------------------------------------
+
+-- Basketball
+insert into coach values(19600201,'Baichung Bhutia','M','02/28/1960','India','9413634655');
+insert into coach values(19681202,'Vladimir Putin','M','12/01/1968','Russia','9913047920');
+insert into coach values(19580503,'David Beckham','M','05/03/1958','England','993047920');
+insert into coach values(19631204,'Micheal Jackson','M','12/09/1963','USA','991304790');
+
+-- badminton
+insert into coach values(19800205,'Deepika Padukone','F','02/21/1980','India','913634655');
+insert into coach values(19610206,'Robin Marksman','M','02/07/1961','Russia','991304720');
+insert into coach values(19680907,'Gerath Southgate','M','09/01/1968','England','99304720');
+insert into coach values(19631208,'Lily Marshall','F','12/09/1963','USA','991304790');
+
+-- swimming
+insert into coach values(19720909,'Viraj Khanna','M','09/22/1972','India','7016410395');
+insert into coach values(19800110,'Tanya Romanava','F','01/19/1980','Russia','3047920');
+insert into coach values(19580411,'Shean Bean','M','04/09/1958','England','3047920');
+insert into coach values(19831212,'Micheal Jordan','M','12/09/1983','USA','991390');
+
+insert into coach values(19670613,'Xhin Mis Cho','M','06/28/1967','Japan','94134655');
+insert into coach values(19680714,'Xin Ping','M','07/21/1968','China','99130420');
+insert into coach values(19880715,'Sean Cahill','M','07/03/1988','Australia','9930920');
+insert into coach values(19681216,'Marion Green','F','12/09/1968','France','99130479');
+
+-- wrestling
+insert into coach values(19521217,'Mahavir Singh Phogat','M','12/02/1952','India','7016410395');
+insert into coach values(19860218,'Mike Kozlovsky','M','02/11/1986','Russia','70164103');
+insert into coach values(19720819,'Beth Jax','F','08/12/1972','England','3047920');
+insert into coach values(19720820,'Dana Wilson','F','08/09/1972','USA','70141035');
+
+insert into coach values(19670921,'Hiroshi Naito','M','09/21/1967','Japan','70110395');
+insert into coach values(19680722,'Tian Bing','M','07/29/1968','China','99130420');
+insert into coach values(19671223,'Susan Sexton','F','12/03/1967','Australia','70160395');
+insert into coach values(19720224,'Paul Luis','M','02/19/1972','France','99130479');
+
+
+
+-- athletes --------------------------------------------------------------------------
+
+-- Basketball
+insert into athlete values(19920101,'Sunil Chhetri','M','01-01-1992','India',1234567890,165,61);
+insert into athlete values(19920201,'Subrata Pal','M','02-01-1992','India',1334567890,171,71);
+insert into athlete values(19930301,'Sandesh Jhingan','M','03-01-1993','India',1234887890,156,69);
+insert into athlete values(19930401,'Manvir Singh','M','04-01-1993','India',1234007890,185,75);
+insert into athlete values(19940501,'Robin Singh','M','05-01-1994','India',1224567890,159,65);
+insert into athlete values(19940601,'Christian Pulisic','M','06-06-1994','USA',1234111890,145,59);
+insert into athlete values(19930701,'Tim Howard','M','07-07-1993','USA',1222567890,156,77);
+insert into athlete values(19930801,'Josh Sargent','M','08-08-1993','USA',1234777890,159,76);
+insert into athlete values(19920901,'Tyler Adams','M','09-09-1992','USA',1234599990,185,78);
+insert into athlete values(19921001,'Wil Trap','M','10-10-1992','USA',1234500090,175,67);
+insert into athlete values(19931101,'Igor Akinfeev','M','11-01-1993','Russia',1234567440,157,61);
+insert into athlete values(19931201,'Mario Fernandes','M','12-02-1993','Russia',1234997890,169,67);
+insert into athlete values(19940101,'Yuri Zhirkov','M','01-04-1994','Russia',1230067890,149,74);
+insert into athlete values(19940201,'Roman Zobnin','M','02-05-1994','Russia',1134567890,147,77);
+insert into athlete values(19920301,'Ilya Kutepov','M','03-06-1992','Russia',1295567890,174,49);
+insert into athlete values(19910401,'Wayne Rooney','M','04-01-1991','England',1234567890,165,67);
+insert into athlete values(19910501,'Harry Kane','M','05-01-1991','England',1234567890,177,61);
+insert into athlete values(19900601,'Harry Maguire','M','06-01-1990','England',1234567890,179,61);
+insert into athlete values(19900701,'Marcus Rashford','M','07-01-1990','England',1234567890,181,71);
+insert into athlete values(19910801,'Jesse LIngard','M','08-01-1991','England',1234567890,184,57);
+
+--Swimming
+insert into athlete values(19900102,'Sajan Prakash','M','01-12-1990','India',9204567890,166,67);
+insert into athlete values(19910202,'Shikha Tandon','F','02-11-1991','India',9297867890,175,76);
+insert into athlete values(19920302,'Adam Peaty','M','03-10-1992','England',9734567890,165,55);
+insert into athlete values(19930402,'Lizzie Simmonds','F','04-09-1993','England',9114567890,159,57);
+insert into athlete values(19940502,'Xu Jiayu','M','05-08-1994','Japan',9435567890,177,49);
+insert into athlete values(19940602,'Rikako Ikee','F','06-07-1994','Japan',9288567890,169,54);
+insert into athlete values(19930702,'Sun Yang','M','07-06-1993','China',9234907890,180,59);
+insert into athlete values(19920802,'Ye Shiwen','F','08-05-1992','China',9257567890,160,66);
+insert into athlete values(19910902,'Michael Phelps','M','09-04-1991','USA',9234117890,188,67);
+insert into athlete values(19901002,'Grant Hackett','F','10-03-1990','USA',9234500890,166,47);
+insert into athlete values(19901102,'Alexander Popov','M','11-02-1990','Russia',9234569990,175,58);
+insert into athlete values(19911202,'Katie Ledecy','F','12-01-1991','Russia',9234666890,165,64);
+insert into athlete values(19920102,'Alain Bernard','M','01-22-1992','France',9234555890,156,67);
+insert into athlete values(19930202,'Laure Manaudou','F','02-21-1993','France',9234567790,169,46);
+insert into athlete values(19940302,'Ian Thorpe','M','03-29-1994','Australia',9234533890,155,79);
+insert into athlete values(19940402,'Libby Trickett','F','04-19-1994','Australia',9234522890,167,67);
+
+--Badminton
+insert into athlete values(19950801,'Srinath Kidambi','M','08-18-1993','India',9409078025,175,72);
+insert into athlete values(19960502,'Parupalli Kashyap','M','08-18-1996','India',9409078024,174,62);
+insert into athlete values(19970803,'Saina Nehwal','F','08-18-1997','India',9409078023,181,73);
+insert into athlete values(19950804,'PV Sindhu','F','08-18-1996','India',9409078022,176,69);
+insert into athlete values(19960805,'Howard Shu','M','08-11-1996','USA',9509078025,175,72);
+insert into athlete values(19970806,'Phillip Chew','M','08-12-1997','USA',9459078025,176,78);
+insert into athlete values(19950807,'Iris Wang','F','08-13-1995','USA',9405078025,165,76);
+insert into athlete values(19960808,'Eva Lee','F','08-14-1996','USA',5409078025,179,72);
+insert into athlete values(19970809,'Vladimir Ivanov','M','08-15-1997','Russia',986213999,175,72);
+insert into athlete values(19950811,'Ivan Sozonov','M','08-08-1995','Russia',986213998,185,72);
+insert into athlete values(19960512,'Nina Vislova','F','08-28-1996','Russia',986213997,174,62);
+insert into athlete values(19970813,'Valeria Sorokina','F','08-11-1997','Russia',986213996,181,73);
+insert into athlete values(19950814,'Mathew Chau','M','08-13-1995','England',986213995,176,69);
+insert into athlete values(19960415,'Ross Smith','M','04-12-1996','England',986213994,175,62);
+insert into athlete values(19970316,'Renuga Veeran','F','03-13-1997','England',986213993,175,66);
+insert into athlete values(19950217,'Leanna Choo','F','02-15-1995','England',986213992,172,69);
+
+--Wrestling
+insert into athlete values(19950721,'Sushil Kumar','M','07-18-1993','India',986213991,175,72);
+insert into athlete values(19960522,'Jackie Chan','M','05-18-1996','China',986213990,174,75);
+insert into athlete values(19970723,'Sakshi Malik','F','07-18-1997','India',986213989,181,56);
+insert into athlete values(19950724,'Wang un','F','07-18-1996','China',986213988,176,57);
+insert into athlete values(19960725,'Kyl Sander','M','07-11-1996','USA',986213987,175,72);
+insert into athlete values(19970726,'Tetsuya Bushi','M','07-12-1997','Japan',986213986,176,74);
+insert into athlete values(19950727,'Halen Maroulis','F','07-13-1995','USA',986213985,165,57);
+insert into athlete values(19960728,'Asuka Gayi','F','07-14-1996','Japan',986213984,179,58);
+insert into athlete values(19970729,'Ivan Yarigiv','M','07-15-1997','Russia',986213983,175,86);
+insert into athlete values(19950731,'Buddy Murphy','M','07-08-1995','Australia',986213982,185,85);
+insert into athlete values(19960732,'Nina Visloviaka','F','07-28-1996','Russia',986213981,174,63);
+insert into athlete values(19970733,'Peyton Royce','F','07-11-1997','Australia',986213980,181,61);
+insert into athlete values(19950734,'Pete Dunne','M','07-13-1995','England',986213979,176,88);
+insert into athlete values(19960735,'Anty Griezmann','M','07-12-1996','France',986213978,175,83);
+insert into athlete values(19970736,'Paige Jones','F','07-13-1997','England',986213976,175,62);
+insert into athlete values(19950737,'Kielena Umtiti','F','07-15-1995','France',986213975,172,66);
+
+
+
+-- teams ----------------------------------------------------------------------------
+
+---Basketball
+insert into team values(0000000001,5,'India',19920101,19600201);
+insert into team values(0000000002,5,'USA',19940601,19631204);
+insert into team values(0000000003,5,'Russia',19931101,19681202);
+insert into team values(0000000004,5,'England',19910401,19580503);
+
+
+---Badminton
+---men
+insert into team values(0000000021,1,'India',19950801,19800205);
+insert into team values(0000000022,1,'India',19960502,19800205);
+insert into team values(0000000025,1,'USA',19960805,19631208);
+insert into team values(0000000026,1,'USA',19970806,19631208);
+insert into team values(0000000029,1,'Russia',19970809,19610206);
+insert into team values(0000000030,1,'Russia',19950811,19610206);
+insert into team values(0000000033,1,'England',19950814,19680907);
+insert into team values(0000000034,1,'England',19960415,19680907);
+---women
+insert into team values(0000000023,1,'India',19970803,19800205);
+insert into team values(0000000024,1,'India',19950804,19800205);
+insert into team values(0000000027,1,'USA',19950807,19631208);
+insert into team values(0000000028,1,'USA',19960808,19631208);
+insert into team values(0000000031,1,'Russia',19960512,19610206);
+insert into team values(0000000032,1,'Russia',19970813,19610206);
+insert into team values(0000000035,1,'England',19970316,19680907);
+insert into team values(0000000036,1,'England',19950217,19680907);
+---mix doubles
+insert into team values(0000000037,2,'India',19950801,19800205);
+insert into team values(0000000038,2,'India',19950804,19800205);
+insert into team values(0000000039,2,'USA',19960805,19631208);
+insert into team values(0000000040,2,'USA',19960808,19631208);
+insert into team values(0000000041,2,'Russia',19970809,19610206);
+insert into team values(0000000042,2,'Russia',19950811,19610206);
+insert into team values(0000000043,2,'England',19950814,19680907);
+insert into team values(0000000044,2,'England',19950217,19680907);
+
+
+---Swimming
+---men
+insert into team values(0000000005,1,'India',19900102,19720909);
+insert into team values(0000000007,1,'England',19920302,19580411);
+insert into team values(0000000009,1,'Japan',19940502,19670613);
+insert into team values(0000000011,1,'China',19930702,19680714);
+insert into team values(0000000013,1,'USA',19910902,19831212);
+insert into team values(0000000015,1,'Russia',19901102,19800110);
+insert into team values(0000000017,1,'France',19920102,19681216);
+insert into team values(0000000019,1,'Australia',19940302,19880715);
+---women
+insert into team values(0000000006,1,'India',19910202,19720909);
+insert into team values(0000000008,1,'England',19930402,19580411);
+insert into team values(0000000010,1,'Japan',19940602,19670613);
+insert into team values(0000000012,1,'China',19920802,19680714);
+insert into team values(0000000014,1,'USA',19901002,19831212);
+insert into team values(0000000016,1,'Russia',19911202,19800110);
+insert into team values(0000000018,1,'France',19930202,19681216);
+insert into team values(0000000020,1,'Australia',19940402,19880715);
+
+
+---Wrestling
+---74kg men
+insert into team values(0000000045,1,'India',19950721,19521217);
+insert into team values(0000000051,1,'China',19960522,19680722);
+insert into team values(0000000049,1,'Japan',19970726,19670921);
+insert into team values(0000000053,1,'USA',19960725,19720820);
+---86kg men
+insert into team values(0000000047,1,'England',19950734,19720819);
+insert into team values(0000000055,1,'Russia',19970729,19860218);
+insert into team values(0000000057,1,'France',19960735,19720224);
+insert into team values(0000000059,1,'Australia',19950731,19671223);
+---58kg women
+insert into team values(0000000046,1,'India',19970723,19521217);
+insert into team values(0000000050,1,'Japan',19960728,19670921);
+insert into team values(0000000052,1,'China',19950724,19680722);
+insert into team values(0000000054,1,'USA',19950727,19720820);
+---63kg women
+insert into team values(0000000048,1,'England',19970736,19720819);
+insert into team values(0000000056,1,'Russia',19960732,19860218);
+insert into team values(0000000058,1,'France',19950737,19720224);
+insert into team values(0000000060,1,'Australia',19970733,19671223);
+
+
+---Belongs to --------------------------------------------------------------------
+
+---Basketball
+insert into belongs_to values(0000000001,19920101);
+insert into belongs_to values(0000000001,19920201);
+insert into belongs_to values(0000000001,19930301);
+insert into belongs_to values(0000000001,19930401);
+insert into belongs_to values(0000000001,19940501);
+
+insert into belongs_to values(0000000002,19940601);
+insert into belongs_to values(0000000002,19930701);
+insert into belongs_to values(0000000002,19930801);
+insert into belongs_to values(0000000002,19920901);
+insert into belongs_to values(0000000002,19921001);
+
+insert into belongs_to values(0000000003,19931101);
+insert into belongs_to values(0000000003,19931201);
+insert into belongs_to values(0000000003,19940101);
+insert into belongs_to values(0000000003,19940201);
+insert into belongs_to values(0000000003,19920301);
+
+insert into belongs_to values(0000000004,19910401);
+insert into belongs_to values(0000000004,19910501);
+insert into belongs_to values(0000000004,19900601);
+insert into belongs_to values(0000000004,19900701);
+insert into belongs_to values(0000000004,19910801);
+
+
+---Badminton
+insert into belongs_to values(0000000021,19950801);
+insert into belongs_to values(0000000022,19960502);
+insert into belongs_to values(0000000023,19970803);
+insert into belongs_to values(0000000024,19950804);
+insert into belongs_to values(0000000025,19960805);
+insert into belongs_to values(0000000026,19970806);
+insert into belongs_to values(0000000027,19950807);
+insert into belongs_to values(0000000028,19960808);
+insert into belongs_to values(0000000029,19970809);
+insert into belongs_to values(0000000030,19950811);
+insert into belongs_to values(0000000031,19960512);
+insert into belongs_to values(0000000032,19970813);
+insert into belongs_to values(0000000033,19950814);
+insert into belongs_to values(0000000034,19960415);
+insert into belongs_to values(0000000035,19970316);
+insert into belongs_to values(0000000036,19950217);
+insert into belongs_to values(0000000037,19950801);
+insert into belongs_to values(0000000038,19950804);
+insert into belongs_to values(0000000037,19970803);
+insert into belongs_to values(0000000038,19960502);
+insert into belongs_to values(0000000039,19960805);
+insert into belongs_to values(0000000040,19960808);
+insert into belongs_to values(0000000039,19970806);
+insert into belongs_to values(0000000040,19950807);
+insert into belongs_to values(0000000041,19970809);
+insert into belongs_to values(0000000042,19950811);
+insert into belongs_to values(0000000041,19970813);
+insert into belongs_to values(0000000042,19960512);
+insert into belongs_to values(0000000043,19950814);
+insert into belongs_to values(0000000044,19950217);
+insert into belongs_to values(0000000043,19970316);
+insert into belongs_to values(0000000044,19960415);
+
+
+---Swimming
+insert into belongs_to values(0000000005,19900102);
+insert into belongs_to values(0000000006,19910202);
+insert into belongs_to values(0000000007,19920302);
+insert into belongs_to values(0000000008,19930402);
+insert into belongs_to values(0000000009,19940502);
+insert into belongs_to values(0000000010,19940602);
+insert into belongs_to values(0000000011,19930702);
+insert into belongs_to values(0000000012,19920802);
+insert into belongs_to values(0000000013,19910902);
+insert into belongs_to values(0000000014,19901002);
+insert into belongs_to values(0000000015,19901102);
+insert into belongs_to values(0000000016,19911202);
+insert into belongs_to values(0000000017,19920102);
+insert into belongs_to values(0000000018,19930202);
+insert into belongs_to values(0000000019,19940302);
+insert into belongs_to values(0000000020,19940402);
+
+
+---Wrestling
+---74kg men
+insert into belongs_to values(0000000045,19950721);
+insert into belongs_to values(0000000051,19960522);
+insert into belongs_to values(0000000053,19960725);
+insert into belongs_to values(0000000049,19970726);
+---86kg men
+insert into belongs_to values(0000000055,19970729);
+insert into belongs_to values(0000000059,19950731);
+insert into belongs_to values(0000000047,19950734);
+insert into belongs_to values(0000000057,19960735);
+---58kg women
+insert into belongs_to values(0000000046,19970723);
+insert into belongs_to values(0000000052,19950724);
+insert into belongs_to values(0000000054,19950727);
+insert into belongs_to values(0000000050,19960728);
+---63kg women
+insert into belongs_to values(0000000048,19970736);
+insert into belongs_to values(0000000056,19960732);
+insert into belongs_to values(0000000058,19950737);
+insert into belongs_to values(0000000060,19970733);
+
+
+
+-- inserting values in round of 2012 SummitS ------------------------------------------
+
+-- Basketball
+insert into round values(2012,199601,1,1,'2012-03-01 12:30:00','Old Trafford',19710701,1);
+insert into round values(2012,199601,1,2,'2012-03-01 12:30:00','Etihad',19850202,1);
+insert into round values(2012,199601,2,1,'2012-03-02 21:30:00','Old Trafford',19850202,0);
+
+-- badminton singles men
+insert into round values(2012,199602,1,1,'2012-03-01 12:30:00','White City Stadium',19791107,1);
+insert into round values(2012,199602,1,2,'2012-03-01 12:30:00','White City Stadium',19821206,1);
+insert into round values(2012,199602,1,3,'2012-03-01 14:30:00','White City Stadium',19791107,1);
+insert into round values(2012,199602,1,4,'2012-03-01 14:30:00','White City Stadium',19821206,1);
+insert into round values(2012,199602,2,1,'2012-03-02 14:30:00','White City Stadium',19791107,1);
+insert into round values(2012,199602,2,2,'2012-03-02 14:30:00','White City Stadium',19821206,1);
+insert into round values(2012,199602,3,1,'2012-03-03 14:30:00','White City Stadium',19791107,0);
+
+-- badminton singles women
+insert into round values(2012,199603,1,1,'2012-03-01 12:30:00','White City Stadium',19850105,1);
+insert into round values(2012,199603,1,2,'2012-03-01 12:30:00','White City Stadium',19820504,1);
+insert into round values(2012,199603,1,3,'2012-03-01 14:30:00','White City Stadium',19850105,1);
+insert into round values(2012,199603,1,4,'2012-03-01 14:30:00','White City Stadium',19820504,1);
+insert into round values(2012,199603,2,1,'2012-03-02 14:30:00','White City Stadium',19850105,1);
+insert into round values(2012,199603,2,2,'2012-03-02 14:30:00','White City Stadium',19820504,1);
+insert into round values(2012,199603,3,1,'2012-03-03 14:30:00','White City Stadium',19850105,0);
+
+--swimming men
+insert into round values(2012,199605,1,1,'2012-03-04 12:30:00','London Aquatics Center',19820504,2);
+insert into round values(2012,199605,1,2,'2012-03-04 12:30:00','London Aquatics Center',19820504,2);
+insert into round values(2012,199605,2,1,'2012-03-04 21:30:00','London Aquatics Center',19820504,0);
+
+-- wrestling men 74 kg
+insert into round values(2012,199607,1,1,'2012-03-04 12:30:00','Excel London',19880903,1);
+insert into round values(2012,199607,1,2,'2012-03-04 15:30:00','Excel London',19880903,1);
+insert into round values(2012,199607,2,1,'2012-03-04 21:30:00','Excel London',19880903,0);
+
+--wrestling women 58 kg
+insert into round values(2012,199609,1,1,'2012-03-05 15:30:00','Excel London',19821206,1);
+insert into round values(2012,199609,1,2,'2012-03-05 15:30:00','Excel London',19821206,1);
+insert into round values(2012,199609,2,1,'2012-03-05 18:30:00','Excel London',19821206,0);
+
+
+
+-- inserting values in round of 2016 SummitS ------------------------------------------
+
+-- Basketball
+insert into round values(2016,199601,1,1,'2016-03-01 12:30:00','Maracana',19710701,1);
+insert into round values(2016,199601,1,2,'2016-03-01 12:30:00','Salvador',19850202,1);
+insert into round values(2016,199601,2,1,'2016-03-02 21:30:00','Maracana',19850202,0);
+
+-- badminton singles men
+insert into round values(2016,199602,1,1,'2016-03-01 12:30:00','Riocentro-pavilion 4',19791107,1);
+insert into round values(2016,199602,1,2,'2016-03-01 12:30:00','Riocentro-pavilion 4',19821206,1);
+insert into round values(2016,199602,1,3,'2016-03-01 14:30:00','Riocentro-pavilion 4',19791107,1);
+insert into round values(2016,199602,1,4,'2016-03-01 14:30:00','Riocentro-pavilion 4',19821206,1);
+insert into round values(2016,199602,2,1,'2016-03-02 14:30:00','Riocentro-pavilion 4',19791107,1);
+insert into round values(2016,199602,2,2,'2016-03-02 14:30:00','Riocentro-pavilion 4',19821206,1);
+insert into round values(2016,199602,3,1,'2016-03-03 14:30:00','Riocentro-pavilion 4',19791107,0);
+
+-- badminton singles women
+insert into round values(2016,199603,1,1,'2016-03-01 12:30:00','Riocentro-pavilion 4',19850105,1);
+insert into round values(2016,199603,1,2,'2016-03-01 12:30:00','Riocentro-pavilion 4',19820504,1);
+insert into round values(2016,199603,1,3,'2016-03-01 14:30:00','Riocentro-pavilion 4',19850105,1);
+insert into round values(2016,199603,1,4,'2016-03-01 14:30:00','Riocentro-pavilion 4',19820504,1);
+insert into round values(2016,199603,2,1,'2016-03-02 14:30:00','Riocentro-pavilion 4',19850105,1);
+insert into round values(2016,199603,2,2,'2016-03-02 14:30:00','Riocentro-pavilion 4',19820504,1);
+insert into round values(2016,199603,3,1,'2016-03-03 14:30:00','Riocentro-pavilion 4',19850105,0);
+
+-- badminton doubles
+insert into round values(2016,199604,1,1,'2016-03-05 12:30:00','Riocentro-pavilion 4',19850105,1);
+insert into round values(2016,199604,1,2,'2016-03-05 12:30:00','Riocentro-pavilion 4',19820504,1);
+insert into round values(2016,199604,2,1,'2016-03-06 21:30:00','Riocentro-pavilion 4',19850105,0);
+
+--swimming men
+insert into round values(2016,199605,1,1,'2016-03-04 12:30:00','Fort Copacabana',19820504,2);
+insert into round values(2016,199605,1,2,'2016-03-04 12:30:00','Fort Copacabana',19820504,2);
+insert into round values(2016,199605,2,1,'2016-03-04 21:30:00','Fort Copacabana',19820504,0);
+
+--swimming women
+insert into round values(2016,199606,1,1,'2016-03-05 12:30:00','Fort Copacabana',19850105,2);
+insert into round values(2016,199606,1,2,'2016-03-05 12:30:00','Fort Copacabana',19850105,2);
+insert into round values(2016,199606,2,1,'2016-03-05 21:30:00','Fort Copacabana',19850105,0);
+
+-- wrestling men 74 kg
+insert into round values(2016,199607,1,1,'2016-03-04 12:30:00','Carioca Arena 2',19880903,1);
+insert into round values(2016,199607,1,2,'2016-03-04 15:30:00','Carioca Arena 2',19880903,1);
+insert into round values(2016,199607,2,1,'2016-03-04 21:30:00','Carioca Arena 2',19880903,0);
+
+-- wrestling men 86 kg
+insert into round values(2016,199608,1,1,'2016-03-05 12:30:00','Carioca Arena 2',19821206,1);
+insert into round values(2016,199608,1,2,'2016-03-05 15:30:00','Carioca Arena 2',19821206,1);
+insert into round values(2016,199608,2,1,'2016-03-05 21:30:00','Carioca Arena 2',19821206,0);
+
+--wrestling women 58 kg
+insert into round values(2016,199609,1,1,'2016-03-05 15:30:00','Carioca Arena 2',19821206,1);
+insert into round values(2016,199609,1,2,'2016-03-05 15:30:00','Carioca Arena 2',19821206,1);
+insert into round values(2016,199609,2,1,'2016-03-05 18:30:00','Carioca Arena 2',19821206,0);
+
+--wrestling women 63 kg
+insert into round values(2016,199610,1,1,'2016-03-06 15:30:00','Carioca Arena 2',19880903,1);
+insert into round values(2016,199610,1,2,'2016-03-06 15:30:00','Carioca Arena 2',19880903,1);
+insert into round values(2016,199610,2,1,'2016-03-06 18:30:00','Carioca Arena 2',19880903,0);
+
+
+
+-- trigger to insert values in registered_in -------------------------------------------------------
+
+create or replace function insert_registered_in()
+returns trigger as $insert_registered_in_trigger$
+declare
+    curr_row registered_in%rowtype;
+    max_comp_teams integer := 0;
+    curr_sub_round_no integer := 1;
+    curr_sub_round_size integer := 0;
+begin
+    select max_comp_teams_per_round into max_comp_teams from event where event_id=NEW.event_id;
+
+    for curr_row in select * from registered_in where year=NEW.year and event_id=NEW.event_id and round_no=NEW.round_no
+    LOOP
+        update registered_in set sub_round_no=curr_sub_round_no
+        where year=curr_row.year and event_id=curr_row.event_id and round_no=curr_row.round_no and team_id=curr_row.team_id;
+        
+        curr_sub_round_size := curr_sub_round_size+1;
+        if(curr_sub_round_size>=max_comp_teams) then
+            curr_sub_round_size := 0;
+            curr_sub_round_no := curr_sub_round_no+1;
+        end if;
+    END LOOP;
+    return null;
+end;
+$insert_registered_in_trigger$
+language 'plpgsql';
+
+
+create trigger insert_registered_in_trigger
+after insert on registered_in
+for each row execute procedure insert_registered_in();
+
+
+
+-- year 2012 Summits registrations ------------------------------------------------------------------
+
+-- Basketball
+insert into registered_in values(2012,199601,1,1,1,NULL);
+insert into registered_in values(2012,199601,1,1,2,NULL);
+insert into registered_in values(2012,199601,1,1,3,NULL);
+insert into registered_in values(2012,199601,1,1,4,NULL);
+
+-- badminton men
+insert into registered_in values(2012,199602,1,1,21,NULL);
+insert into registered_in values(2012,199602,1,1,22,NULL);
+insert into registered_in values(2012,199602,1,1,25,NULL);
+insert into registered_in values(2012,199602,1,1,26,NULL);
+insert into registered_in values(2012,199602,1,1,29,NULL);
+insert into registered_in values(2012,199602,1,1,30,NULL);
+insert into registered_in values(2012,199602,1,1,33,NULL);
+insert into registered_in values(2012,199602,1,1,34,NULL);
+
+-- badminton women
+insert into registered_in values(2012,199603,1,1,23,NULL);
+insert into registered_in values(2012,199603,1,1,24,NULL);
+insert into registered_in values(2012,199603,1,1,27,NULL);
+insert into registered_in values(2012,199603,1,1,28,NULL);
+insert into registered_in values(2012,199603,1,1,31,NULL);
+insert into registered_in values(2012,199603,1,1,32,NULL);
+insert into registered_in values(2012,199603,1,1,35,NULL);
+insert into registered_in values(2012,199603,1,1,36,NULL);
+
+-- swimming men
+insert into registered_in values(2012,199605,1,1,5,NULL);
+insert into registered_in values(2012,199605,1,1,7,NULL);
+insert into registered_in values(2012,199605,1,1,9,NULL);
+insert into registered_in values(2012,199605,1,1,11,NULL);
+insert into registered_in values(2012,199605,1,1,13,NULL);
+insert into registered_in values(2012,199605,1,1,15,NULL);
+insert into registered_in values(2012,199605,1,1,17,NULL);
+insert into registered_in values(2012,199605,1,1,19,NULL);
+
+-- wrestling men 74 kg
+insert into registered_in values(2012,199607,1,1,45,NULL);
+insert into registered_in values(2012,199607,1,1,51,NULL);
+insert into registered_in values(2012,199607,1,1,49,NULL);
+insert into registered_in values(2012,199607,1,1,53,NULL);
+
+-- wrestling women 58 kg
+insert into registered_in values(2012,199609,1,1,46,NULL);
+insert into registered_in values(2012,199609,1,1,50,NULL);
+insert into registered_in values(2012,199609,1,1,52,NULL);
+insert into registered_in values(2012,199609,1,1,54,NULL);
+
+-- year 2016 Summits registrations --------------------------------------------------------------------
+
+-- Basketball
+insert into registered_in values(2016,199601,1,1,1,NULL);
+insert into registered_in values(2016,199601,1,1,2,NULL);
+insert into registered_in values(2016,199601,1,1,3,NULL);
+insert into registered_in values(2016,199601,1,1,4,NULL);
+
+-- badminton men
+insert into registered_in values(2016,199602,1,1,21,NULL);
+insert into registered_in values(2016,199602,1,1,22,NULL);
+insert into registered_in values(2016,199602,1,1,25,NULL);
+insert into registered_in values(2016,199602,1,1,26,NULL);
+insert into registered_in values(2016,199602,1,1,29,NULL);
+insert into registered_in values(2016,199602,1,1,30,NULL);
+insert into registered_in values(2016,199602,1,1,33,NULL);
+insert into registered_in values(2016,199602,1,1,34,NULL);
+
+-- badminton women
+insert into registered_in values(2016,199603,1,1,23,NULL);
+insert into registered_in values(2016,199603,1,1,24,NULL);
+insert into registered_in values(2016,199603,1,1,27,NULL);
+insert into registered_in values(2016,199603,1,1,28,NULL);
+insert into registered_in values(2016,199603,1,1,31,NULL);
+insert into registered_in values(2016,199603,1,1,32,NULL);
+insert into registered_in values(2016,199603,1,1,35,NULL);
+insert into registered_in values(2016,199603,1,1,36,NULL);
+
+-- badminton mix doubles
+insert into registered_in values(2016,199604,1,1,37,NULL);
+insert into registered_in values(2016,199604,1,1,39,NULL);
+insert into registered_in values(2016,199604,1,1,41,NULL);
+insert into registered_in values(2016,199604,1,1,43,NULL);
+
+-- swimming men
+insert into registered_in values(2016,199605,1,1,5,NULL);
+insert into registered_in values(2016,199605,1,1,7,NULL);
+insert into registered_in values(2016,199605,1,1,9,NULL);
+insert into registered_in values(2016,199605,1,1,11,NULL);
+insert into registered_in values(2016,199605,1,1,13,NULL);
+insert into registered_in values(2016,199605,1,1,15,NULL);
+insert into registered_in values(2016,199605,1,1,17,NULL);
+insert into registered_in values(2016,199605,1,1,19,NULL);
+
+-- swimming women
+insert into registered_in values(2016,199606,1,1,6,NULL);
+insert into registered_in values(2016,199606,1,1,8,NULL);
+insert into registered_in values(2016,199606,1,1,10,NULL);
+insert into registered_in values(2016,199606,1,1,12,NULL);
+insert into registered_in values(2016,199606,1,1,14,NULL);
+insert into registered_in values(2016,199606,1,1,16,NULL);
+insert into registered_in values(2016,199606,1,1,18,NULL);
+insert into registered_in values(2016,199606,1,1,20,NULL);
+
+-- wrestling men 74 kg
+insert into registered_in values(2016,199607,1,1,45,NULL);
+insert into registered_in values(2016,199607,1,1,51,NULL);
+insert into registered_in values(2016,199607,1,1,49,NULL);
+insert into registered_in values(2016,199607,1,1,53,NULL);
+
+-- wrestling men 86 kg
+insert into registered_in values(2016,199608,1,1,47,NULL);
+insert into registered_in values(2016,199608,1,1,55,NULL);
+insert into registered_in values(2016,199608,1,1,57,NULL);
+insert into registered_in values(2016,199608,1,1,59,NULL);
+
+-- wrestling women 58 kg
+insert into registered_in values(2016,199609,1,1,46,NULL);
+insert into registered_in values(2016,199609,1,1,50,NULL);
+insert into registered_in values(2016,199609,1,1,52,NULL);
+insert into registered_in values(2016,199609,1,1,54,NULL);
+
+-- wrestling women 63 kg
+insert into registered_in values(2016,199610,1,1,48,NULL);
+insert into registered_in values(2016,199610,1,1,56,NULL);
+insert into registered_in values(2016,199610,1,1,58,NULL);
+insert into registered_in values(2016,199610,1,1,60,NULL);
+
+
+
+-- trigger for result ---------------------------------------------------------------
+
+create or replace function update_registered_in()
+returns trigger as $update_registered_in_trigger$
+declare
+    current_rank integer := 0;
+       total_teams_qualified integer := 0;
+begin
+    select result into current_rank from result where record_id = new.record_id;
+    select number_of_teams_qualified into total_teams_qualified from round where
+        year=new.year and event_id=new.event_id and round_no=new.round_no and sub_round_no=new.sub_round_no;
+      if (current_rank <= total_teams_qualified ) then
+        insert into registered_in values(new.year,new.event_id,new.round_no+1,1,new.team_id,NULL);
+    end if;
+    return null;
+end;
+$update_registered_in_trigger$
+language 'plpgsql';
+
+
+create trigger update_registered_in_trigger
+after update on registered_in
+for each row execute procedure update_registered_in();
+
+
+
+-- result of Basketball Summits 2012 with their records -----------------------------------------------
+insert into result values(1,1);
+insert into result values(2,2);
+insert into result values(3,1);
+insert into result values(4,2);
+insert into result values(5,1);
+insert into result values(6,2);
+
+update registered_in set record_id=1 where year=2012 and team_id = 1 and round_no=1;
+update registered_in set record_id=2 where year=2012 and team_id = 2 and round_no=1;
+update registered_in set record_id=3 where year=2012 and team_id = 3 and round_no=1;
+update registered_in set record_id=4 where year=2012 and team_id = 4 and round_no=1;
+update registered_in set record_id=5 where year=2012 and team_id = 1 and round_no=2;
+update registered_in set record_id=6 where year=2012 and team_id = 3 and round_no=2;
+
+insert into Basketball values(1,19920101,1);
+insert into Basketball values(1,19930401,2);
+insert into Basketball values(3,19940101,5);
+insert into Basketball values(4,19910401,3);
+insert into Basketball values(5,19920101,1);
+
+
+-- result of Basketball Summits 2016 with their records -----------------------------------------------
+insert into result values(12,1);
+insert into result values(11,2);
+insert into result values(10,1);
+insert into result values(9,2);
+insert into result values(8,1);
+insert into result values(7,2);
+
+update registered_in set record_id=7 where year=2016 and team_id = 1 and round_no=1;
+update registered_in set record_id=8 where year=2016 and team_id = 2 and round_no=1;
+update registered_in set record_id=9 where year=2016 and team_id = 3 and round_no=1;
+update registered_in set record_id=10 where year=2016 and team_id = 4 and round_no=1;
+update registered_in set record_id=11 where year=2016 and team_id = 2 and round_no=2;
+update registered_in set record_id=12 where year=2016 and team_id = 4 and round_no=2;
+
+insert into Basketball values(8,19940601,2);
+insert into Basketball values(7,19920101,1);
+insert into Basketball values(10,19900701,1);
+insert into Basketball values(12,19900601,1);
+
+
+-- result of badminton men Summits 2012 and their record --------------------------------------------
+insert into result values(13,1);
+insert into result values(14,2);
+insert into result values(15,1);
+insert into result values(16,2);
+insert into result values(17,1);
+insert into result values(18,2);
+insert into result values(19,1);
+insert into result values(20,2);
+insert into result values(21,1);
+insert into result values(22,2);
+insert into result values(23,1);
+insert into result values(24,2);
+insert into result values(25,1);
+insert into result values(26,2);
+
+update registered_in set record_id=13 where year=2012 and team_id = 21 and round_no=1;
+update registered_in set record_id=14 where year=2012 and team_id = 22 and round_no=1;
+update registered_in set record_id=15 where year=2012 and team_id = 25 and round_no=1;
+update registered_in set record_id=16 where year=2012 and team_id = 26 and round_no=1;
+update registered_in set record_id=17 where year=2012 and team_id = 29 and round_no=1;
+update registered_in set record_id=18 where year=2012 and team_id = 30 and round_no=1;
+update registered_in set record_id=19 where year=2012 and team_id = 33 and round_no=1;
+update registered_in set record_id=20 where year=2012 and team_id = 34 and round_no=1;
+update registered_in set record_id=21 where year=2012 and team_id = 21 and round_no=2;
+update registered_in set record_id=22 where year=2012 and team_id = 25 and round_no=2;
+update registered_in set record_id=23 where year=2012 and team_id = 29 and round_no=2;
+update registered_in set record_id=24 where year=2012 and team_id = 33 and round_no=2;
+update registered_in set record_id=25 where year=2012 and team_id = 21 and round_no=3;
+update registered_in set record_id=26 where year=2012 and team_id = 29 and round_no=3;
+
+insert into badminton values(13,1,21);
+insert into badminton values(13,2,21);
+insert into badminton values(14,1,18);
+insert into badminton values(14,2,11);
+insert into badminton values(15,1,21);
+insert into badminton values(15,2,21);
+insert into badminton values(16,1,12);
+insert into badminton values(16,2,19);
+insert into badminton values(17,1,21);
+insert into badminton values(17,2,21);
+insert into badminton values(18,1,11);
+insert into badminton values(18,2,08);
+insert into badminton values(19,1,21);
+insert into badminton values(19,2,21);
+insert into badminton values(20,1,10);
+insert into badminton values(20,2,2);
+insert into badminton values(21,1,21);
+insert into badminton values(21,2,21);
+insert into badminton values(22,1,19);
+insert into badminton values(22,2,19);
+insert into badminton values(23,1,21);
+insert into badminton values(23,2,21);
+insert into badminton values(24,1,18);
+insert into badminton values(24,2,12);
+insert into badminton values(25,1,21);
+insert into badminton values(25,2,23);
+insert into badminton values(26,1,19);
+insert into badminton values(26,2,21);
+
+
+
+-- result of badminton men Summits 2016 ---------------------------------------------
+insert into result values(40,1);
+insert into result values(39,2);
+insert into result values(38,1);
+insert into result values(37,2);
+insert into result values(36,1);
+insert into result values(35,2);
+insert into result values(34,1);
+insert into result values(33,2);
+insert into result values(32,1);
+insert into result values(31,2);
+insert into result values(30,1);
+insert into result values(29,2);
+insert into result values(28,1);
+insert into result values(27,2);
+
+update registered_in set record_id=27 where year=2016 and team_id = 21 and round_no=1;
+update registered_in set record_id=28 where year=2016 and team_id = 22 and round_no=1;
+update registered_in set record_id=30 where year=2016 and team_id = 25 and round_no=1;
+update registered_in set record_id=29 where year=2016 and team_id = 26 and round_no=1;
+update registered_in set record_id=32 where year=2016 and team_id = 29 and round_no=1;
+update registered_in set record_id=31 where year=2016 and team_id = 30 and round_no=1;
+update registered_in set record_id=34 where year=2016 and team_id = 33 and round_no=1;
+update registered_in set record_id=33 where year=2016 and team_id = 34 and round_no=1;
+update registered_in set record_id=38 where year=2016 and team_id = 22 and round_no=2;
+update registered_in set record_id=37 where year=2016 and team_id = 25 and round_no=2;
+update registered_in set record_id=35 where year=2016 and team_id = 29 and round_no=2;
+update registered_in set record_id=36 where year=2016 and team_id = 33 and round_no=2;
+update registered_in set record_id=40 where year=2016 and team_id = 22 and round_no=3;
+update registered_in set record_id=39 where year=2016 and team_id = 33 and round_no=3;
+
+insert into badminton values(28,1,21);
+insert into badminton values(28,2,21);
+insert into badminton values(27,1,18);
+insert into badminton values(27,2,11);
+insert into badminton values(30,1,21);
+insert into badminton values(30,2,21);
+insert into badminton values(29,1,12);
+insert into badminton values(29,2,19);
+insert into badminton values(32,1,21);
+insert into badminton values(32,2,21);
+insert into badminton values(31,1,11);
+insert into badminton values(31,2,08);
+insert into badminton values(34,1,21);
+insert into badminton values(34,2,21);
+insert into badminton values(33,1,10);
+insert into badminton values(33,2,2);
+insert into badminton values(38,1,21);
+insert into badminton values(38,2,21);
+insert into badminton values(37,1,19);
+insert into badminton values(37,2,19);
+insert into badminton values(36,1,21);
+insert into badminton values(36,2,21);
+insert into badminton values(35,1,18);
+insert into badminton values(35,2,12);
+insert into badminton values(40,1,21);
+insert into badminton values(40,2,23);
+insert into badminton values(39,1,19);
+insert into badminton values(39,2,21);
+
+
+
+-- result of badminton women Summits 2012 -------------------------------------------
+insert into result values(42,1);
+insert into result values(41,2);
+insert into result values(43,1);
+insert into result values(44,2);
+insert into result values(46,1);
+insert into result values(45,2);
+insert into result values(48,1);
+insert into result values(47,2);
+insert into result values(49,1);
+insert into result values(50,2);
+insert into result values(52,1);
+insert into result values(51,2);
+insert into result values(53,1);
+insert into result values(54,2);
+
+update registered_in set record_id=41 where year=2012 and team_id = 23 and round_no=1;
+update registered_in set record_id=42 where year=2012 and team_id = 24 and round_no=1;
+update registered_in set record_id=43 where year=2012 and team_id = 27 and round_no=1;
+update registered_in set record_id=44 where year=2012 and team_id = 28 and round_no=1;
+update registered_in set record_id=45 where year=2012 and team_id = 31 and round_no=1;
+update registered_in set record_id=46 where year=2012 and team_id = 32 and round_no=1;
+update registered_in set record_id=47 where year=2012 and team_id = 35 and round_no=1;
+update registered_in set record_id=48 where year=2012 and team_id = 36 and round_no=1;
+update registered_in set record_id=49 where year=2012 and team_id = 24 and round_no=2;
+update registered_in set record_id=50 where year=2012 and team_id = 27 and round_no=2;
+update registered_in set record_id=52 where year=2012 and team_id = 32 and round_no=2;
+update registered_in set record_id=51 where year=2012 and team_id = 36 and round_no=2;
+update registered_in set record_id=54 where year=2012 and team_id = 24 and round_no=3;
+update registered_in set record_id=53 where year=2012 and team_id = 32 and round_no=3;
+
+insert into badminton values(42,1,21);
+insert into badminton values(42,2,21);
+insert into badminton values(41,1,18);
+insert into badminton values(41,2,11);
+insert into badminton values(43,1,21);
+insert into badminton values(43,2,21);
+insert into badminton values(44,1,12);
+insert into badminton values(44,2,19);
+insert into badminton values(46,1,21);
+insert into badminton values(46,2,21);
+insert into badminton values(45,1,11);
+insert into badminton values(45,2,08);
+insert into badminton values(48,1,21);
+insert into badminton values(48,2,21);
+insert into badminton values(47,1,10);
+insert into badminton values(47,2,2);
+insert into badminton values(49,1,21);
+insert into badminton values(49,2,21);
+insert into badminton values(50,1,19);
+insert into badminton values(50,2,19);
+insert into badminton values(52,1,21);
+insert into badminton values(52,2,21);
+insert into badminton values(51,1,18);
+insert into badminton values(51,2,12);
+insert into badminton values(53,1,21);
+insert into badminton values(53,2,23);
+insert into badminton values(54,1,19);
+insert into badminton values(54,2,21);
+
+
+
+-- result of badminton women Summits 2016 -------------------------------------------
+insert into result values(56,1);
+insert into result values(55,2);
+insert into result values(57,1);
+insert into result values(58,2);
+insert into result values(60,1);
+insert into result values(59,2);
+insert into result values(62,1);
+insert into result values(61,2);
+insert into result values(63,1);
+insert into result values(64,2);
+insert into result values(66,1);
+insert into result values(65,2);
+insert into result values(67,1);
+insert into result values(68,2);
+
+update registered_in set record_id=55 where year=2016 and team_id = 23 and round_no=1;
+update registered_in set record_id=56 where year=2016 and team_id = 24 and round_no=1;
+update registered_in set record_id=57 where year=2016 and team_id = 27 and round_no=1;
+update registered_in set record_id=58 where year=2016 and team_id = 28 and round_no=1;
+update registered_in set record_id=59 where year=2016 and team_id = 32 and round_no=1;
+update registered_in set record_id=60 where year=2016 and team_id = 31 and round_no=1;
+update registered_in set record_id=62 where year=2016 and team_id = 36 and round_no=1;
+update registered_in set record_id=61 where year=2016 and team_id = 35 and round_no=1;
+update registered_in set record_id=63 where year=2016 and team_id = 27 and round_no=2;
+update registered_in set record_id=64 where year=2016 and team_id = 24 and round_no=2;
+update registered_in set record_id=66 where year=2016 and team_id = 36 and round_no=2;
+update registered_in set record_id=65 where year=2016 and team_id = 31 and round_no=2;
+update registered_in set record_id=67 where year=2016 and team_id = 27 and round_no=3;
+update registered_in set record_id=68 where year=2016 and team_id = 36 and round_no=3;
+
+insert into badminton values(56,1,21);
+insert into badminton values(56,2,21);
+insert into badminton values(55,1,18);
+insert into badminton values(55,2,11);
+insert into badminton values(57,1,21);
+insert into badminton values(57,2,21);
+insert into badminton values(58,1,12);
+insert into badminton values(58,2,19);
+insert into badminton values(60,1,21);
+insert into badminton values(60,2,21);
+insert into badminton values(59,1,11);
+insert into badminton values(59,2,08);
+insert into badminton values(62,1,21);
+insert into badminton values(62,2,21);
+insert into badminton values(61,1,10);
+insert into badminton values(61,2,2);
+insert into badminton values(63,1,21);
+insert into badminton values(63,2,21);
+insert into badminton values(64,1,19);
+insert into badminton values(64,2,19);
+insert into badminton values(66,1,21);
+insert into badminton values(66,2,21);
+insert into badminton values(65,1,18);
+insert into badminton values(65,2,12);
+insert into badminton values(67,1,21);
+insert into badminton values(67,2,23);
+insert into badminton values(68,1,19);
+insert into badminton values(68,2,21);
+
+
+-- result of badminton mix doubles Summits 2016 --------------------------------------
+insert into result values(69,1);
+insert into result values(70,2);
+insert into result values(72,1);
+insert into result values(71,2);
+insert into result values(74,1);
+insert into result values(73,2);
+
+update registered_in set record_id=69 where year=2016 and team_id = 39 and round_no=1;
+update registered_in set record_id=70 where year=2016 and team_id = 37 and round_no=1;
+update registered_in set record_id=71 where year=2016 and team_id = 41 and round_no=1;
+update registered_in set record_id=72 where year=2016 and team_id = 43 and round_no=1;
+update registered_in set record_id=73 where year=2016 and team_id = 43 and round_no=2;
+update registered_in set record_id=74 where year=2016 and team_id = 39 and round_no=2;
+
+insert into badminton values(69,1,21);
+insert into badminton values(69,2,21);
+insert into badminton values(70,1,8);
+insert into badminton values(70,2,11);
+insert into badminton values(72,1,21);
+insert into badminton values(72,2,21);
+insert into badminton values(71,1,12);
+insert into badminton values(71,2,9);
+insert into badminton values(74,1,21);
+insert into badminton values(74,2,21);
+insert into badminton values(73,1,19);
+insert into badminton values(73,2,18);
+
+
+
+-- result of swimming men Summits 2012 ---------------------------------------------
+insert into result values(100,1);
+insert into result values(101,2);
+insert into result values(102,3);
+insert into result values(103,4);
+insert into result values(104,1);
+insert into result values(105,2);
+insert into result values(106,3);
+insert into result values(107,4);
+insert into result values(108,1);
+insert into result values(109,2);
+insert into result values(110,3);
+insert into result values(111,4);
+
+update registered_in set record_id=100 where year=2012 and team_id=5 and round_no=1;
+update registered_in set record_id=102 where year=2012 and team_id=7 and round_no=1;
+update registered_in set record_id=101 where year=2012 and team_id=9 and round_no=1;
+update registered_in set record_id=103 where year=2012 and team_id=11 and round_no=1;
+update registered_in set record_id=104 where year=2012 and team_id=13 and round_no=1;
+update registered_in set record_id=107 where year=2012 and team_id=15 and round_no=1;
+update registered_in set record_id=106 where year=2012 and team_id=17 and round_no=1;
+update registered_in set record_id=105 where year=2012 and team_id=19 and round_no=1;
+update registered_in set record_id=109 where year=2012 and team_id=5 and round_no=2;
+update registered_in set record_id=110 where year=2012 and team_id=9 and round_no=2;
+update registered_in set record_id=108 where year=2012 and team_id=13 and round_no=2;
+update registered_in set record_id=111 where year=2012 and team_id=19 and round_no=2;
+
+insert into swimming values(100,'00:10:23');
+insert into swimming values(102,'00:13:14');
+insert into swimming values(101,'00:11:50');
+insert into swimming values(103,'00:13:30');
+insert into swimming values(104,'00:09:59');
+insert into swimming values(107,'00:15:03');
+insert into swimming values(106,'00:11:50');
+insert into swimming values(105,'00:11:20');
+insert into swimming values(109,'00:13:20');
+insert into swimming values(110,'00:13:40');
+insert into swimming values(108,'00:11:10');
+insert into swimming values(111,'00:14:00');
+
+-- result of swimming men Summits 2016 ---------------------------------------------
+insert into result values(112,1);
+insert into result values(113,2);
+insert into result values(114,3);
+insert into result values(115,4);
+insert into result values(116,1);
+insert into result values(117,2);
+insert into result values(118,3);
+insert into result values(119,4);
+insert into result values(120,1);
+insert into result values(121,2);
+insert into result values(122,3);
+insert into result values(123,4);
+
+update registered_in set record_id=115 where year=2016 and team_id=5 and round_no=1;
+update registered_in set record_id=113 where year=2016 and team_id=7 and round_no=1;
+update registered_in set record_id=114 where year=2016 and team_id=9 and round_no=1;
+update registered_in set record_id=112 where year=2016 and team_id=11 and round_no=1;
+update registered_in set record_id=119 where year=2016 and team_id=13 and round_no=1;
+update registered_in set record_id=117 where year=2016 and team_id=15 and round_no=1;
+update registered_in set record_id=116 where year=2016 and team_id=17 and round_no=1;
+update registered_in set record_id=118 where year=2016 and team_id=19 and round_no=1;
+update registered_in set record_id=121 where year=2016 and team_id=7 and round_no=2;
+update registered_in set record_id=120 where year=2016 and team_id=11 and round_no=2;
+update registered_in set record_id=122 where year=2016 and team_id=15 and round_no=2;
+update registered_in set record_id=123 where year=2016 and team_id=17 and round_no=2;
+
+insert into swimming values(115,'00:14:00');
+insert into swimming values(113,'00:12:00');
+insert into swimming values(114,'00:11:00');
+insert into swimming values(112,'00:10:30');
+insert into swimming values(119,'00:13:56');
+insert into swimming values(117,'00:11:23');
+insert into swimming values(116,'00:11:20');
+insert into swimming values(118,'00:12:30');
+insert into swimming values(121,'00:09:20');
+insert into swimming values(120,'00:08:23');
+insert into swimming values(122,'00:10:20');
+insert into swimming values(123,'00:10:31');
+
+
+
+-- result of swimming women Summits 2016 ---------------------------------------------
+insert into result values(124,1);
+insert into result values(125,2);
+insert into result values(126,3);
+insert into result values(127,4);
+insert into result values(128,1);
+insert into result values(129,2);
+insert into result values(130,3);
+insert into result values(131,4);
+insert into result values(132,1);
+insert into result values(133,2);
+insert into result values(134,3);
+insert into result values(135,4);
+
+update registered_in set record_id=127 where year=2016 and team_id=6 and round_no=1;
+update registered_in set record_id=126 where year=2016 and team_id=8 and round_no=1;
+update registered_in set record_id=125 where year=2016 and team_id=10 and round_no=1;
+update registered_in set record_id=124 where year=2016 and team_id=12 and round_no=1;
+update registered_in set record_id=130 where year=2016 and team_id=14 and round_no=1;
+update registered_in set record_id=128 where year=2016 and team_id=16 and round_no=1;
+update registered_in set record_id=129 where year=2016 and team_id=18 and round_no=1;
+update registered_in set record_id=131 where year=2016 and team_id=20 and round_no=1;
+update registered_in set record_id=132 where year=2016 and team_id=16 and round_no=2;
+update registered_in set record_id=134 where year=2016 and team_id=18 and round_no=2;
+update registered_in set record_id=135 where year=2016 and team_id=12 and round_no=2;
+update registered_in set record_id=133 where year=2016 and team_id=10 and round_no=2;
+
+insert into swimming values(127,'00:14:00');
+insert into swimming values(126,'00:12:20');
+insert into swimming values(125,'00:12:12');
+insert into swimming values(124,'00:11:50');
+insert into swimming values(130,'00:11:15');
+insert into swimming values(128,'00:10:23');
+insert into swimming values(129,'00:11:10');
+insert into swimming values(131,'00:11:30');
+insert into swimming values(132,'00:07:20');
+insert into swimming values(134,'00:09:23');
+insert into swimming values(135,'00:10:50');
+insert into swimming values(133,'00:08:51');
+
+
+
+-- result of wrestling men 74kg Summits 2012 -------------------------------------------
+insert into result values(76,1);
+insert into result values(75,2);
+insert into result values(77,1);
+insert into result values(78,2);
+insert into result values(80,1);
+insert into result values(79,2);
+
+update registered_in set record_id=75 where year=2012 and team_id = 45 and round_no=1;
+update registered_in set record_id=76 where year=2012 and team_id = 51 and round_no=1;
+update registered_in set record_id=78 where year=2012 and team_id = 49 and round_no=1;
+update registered_in set record_id=77 where year=2012 and team_id = 53 and round_no=1;
+update registered_in set record_id=79 where year=2012 and team_id = 51 and round_no=2;
+update registered_in set record_id=80 where year=2012 and team_id = 53 and round_no=2;
+
+insert into wrestling values(75,8);
+insert into wrestling values(76,9);
+insert into wrestling values(78,7);
+insert into wrestling values(77,10);
+insert into wrestling values(79,11);
+insert into wrestling values(80,13);
+
+
+
+-- result of wrestling men 74kg Summits 2016 ----------------------------------------
+insert into result values(82,1);
+insert into result values(81,2);
+insert into result values(83,1);
+insert into result values(84,2);
+insert into result values(86,1);
+insert into result values(85,2);
+
+update registered_in set record_id=81 where year=2016 and team_id = 51 and round_no=1;
+update registered_in set record_id=82 where year=2016 and team_id = 45 and round_no=1;
+update registered_in set record_id=84 where year=2016 and team_id = 53 and round_no=1;
+update registered_in set record_id=83 where year=2016 and team_id = 49 and round_no=1;
+update registered_in set record_id=85 where year=2016 and team_id = 49 and round_no=2;
+update registered_in set record_id=86 where year=2016 and team_id = 45 and round_no=2;
+
+insert into wrestling values(81,6);
+insert into wrestling values(82,8);
+insert into wrestling values(84,8);
+insert into wrestling values(83,9);
+insert into wrestling values(85,10);
+insert into wrestling values(86,11);
+
+
+-- result of wrestling men 86kg Summits 2016 ------------------------------------------
+insert into result values(88,1);
+insert into result values(87,2);
+insert into result values(89,1);
+insert into result values(90,2);
+insert into result values(91,1);
+insert into result values(92,2);
+
+update registered_in set record_id=87 where year=2016 and team_id = 47 and round_no=1;
+update registered_in set record_id=88 where year=2016 and team_id = 55 and round_no=1;
+update registered_in set record_id=89 where year=2016 and team_id = 57 and round_no=1;
+update registered_in set record_id=90 where year=2016 and team_id = 59 and round_no=1;
+update registered_in set record_id=91 where year=2016 and team_id = 57 and round_no=2;
+update registered_in set record_id=92 where year=2016 and team_id = 55 and round_no=2;
+
+insert into wrestling values(87,1);
+insert into wrestling values(88,8);
+insert into wrestling values(89,5);
+insert into wrestling values(90,8);
+insert into wrestling values(91,16);
+insert into wrestling values(92,12);
+
+
+-- result of wrestling women(58kg) Summits 2012 ---------------------------------------------
+insert into result values(142,1);
+insert into result values(143,2);
+insert into result values(144,1);
+insert into result values(145,2);
+insert into result values(146,1);
+insert into result values(147,2);
+
+update registered_in set record_id=143 where year=2012 and team_id=46 and round_no=1;
+update registered_in set record_id=142 where year=2012 and team_id=50 and round_no=1;
+update registered_in set record_id=144 where year=2012 and team_id=52 and round_no=1;
+update registered_in set record_id=145 where year=2012 and team_id=54 and round_no=1;
+update registered_in set record_id=147 where year=2012 and team_id=50 and round_no=2;
+update registered_in set record_id=146 where year=2012 and team_id=52 and round_no=2;
+
+insert into wrestling values(143,11);
+insert into wrestling values(142,13);
+insert into wrestling values(144,9);
+insert into wrestling values(145,7);
+insert into wrestling values(147,10);
+insert into wrestling values(146,13);
+
+
+-- result of wrestling women(58kg) Summits 2016 ---------------------------------------------
+insert into result values(136,1);
+insert into result values(137,2);
+insert into result values(138,1);
+insert into result values(139,2);
+insert into result values(140,1);
+insert into result values(141,2);
+
+update registered_in set record_id=136 where year=2016 and team_id=46 and round_no=1;
+update registered_in set record_id=137 where year=2016 and team_id=50 and round_no=1;
+update registered_in set record_id=139 where year=2016 and team_id=52 and round_no=1;
+update registered_in set record_id=138 where year=2016 and team_id=54 and round_no=1;
+update registered_in set record_id=141 where year=2016 and team_id=46 and round_no=2;
+update registered_in set record_id=140 where year=2016 and team_id=54 and round_no=2;
+
+insert into wrestling values(136,9);
+insert into wrestling values(137,6);
+insert into wrestling values(139,6);
+insert into wrestling values(138,7);
+insert into wrestling values(141,13);
+insert into wrestling values(140,14);
+
+
+-- result of wrestling women(63kg) Summits 2016 -----------------------------------------------
+insert into result values(93,1);
+insert into result values(94,2);
+insert into result values(96,1);
+insert into result values(95,2);
+insert into result values(97,1);
+insert into result values(98,2);
+
+update registered_in set record_id=95 where year=2016 and team_id = 48 and round_no=1;
+update registered_in set record_id=96 where year=2016 and team_id = 56 and round_no=1;
+update registered_in set record_id=98 where year=2016 and team_id = 58 and round_no=1;
+update registered_in set record_id=97 where year=2016 and team_id = 60 and round_no=1;
+update registered_in set record_id=94 where year=2016 and team_id = 60 and round_no=2;
+update registered_in set record_id=93 where year=2016 and team_id = 56 and round_no=2;
+
+
+insert into wrestling values(95,3);
+insert into wrestling values(96,5);
+insert into wrestling values(98,6);
+insert into wrestling values(97,10);
+insert into wrestling values(94,12);
+insert into wrestling values(93,14);
+
+
